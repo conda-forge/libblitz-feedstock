@@ -5,7 +5,7 @@ Home: https://sourceforge.net/projects/blitz
 
 Package license: LGPL 3
 
-Feedstock license: BSD
+Feedstock license: BSD 3-Clause
 
 Summary: A C++ class library for scientific computing which provides performance on par with Fortran 77/90
 
@@ -69,6 +69,7 @@ Terminology
 
 Current build status
 ====================
+
 Linux: [![Circle CI](https://circleci.com/gh/conda-forge/libblitz-feedstock.svg?style=svg)](https://circleci.com/gh/conda-forge/libblitz-feedstock)
 OSX: [![TravisCI](https://travis-ci.org/conda-forge/libblitz-feedstock.svg?branch=master)](https://travis-ci.org/conda-forge/libblitz-feedstock) 
 Windows: [![AppVeyor](https://ci.appveyor.com/api/projects/status/github/conda-forge/libblitz-feedstock?svg=True)](https://ci.appveyor.com/project/conda-forge/libblitz-feedstock/branch/master)
