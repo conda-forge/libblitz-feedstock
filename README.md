@@ -11,6 +11,18 @@ Summary: A C++ class library for scientific computing which provides performance
 
 
 
+Current build status
+====================
+
+Linux: [![Circle CI](https://circleci.com/gh/conda-forge/libblitz-feedstock.svg?style=shield)](https://circleci.com/gh/conda-forge/libblitz-feedstock)
+OSX: [![TravisCI](https://travis-ci.org/conda-forge/libblitz-feedstock.svg?branch=master)](https://travis-ci.org/conda-forge/libblitz-feedstock)
+Windows: ![](https://cdn.rawgit.com/conda-forge/conda-smithy/90845bba35bec53edac7a16638aa4d77217a3713/conda_smithy/static/disabled.svg)
+
+Current release info
+====================
+Version: [![Anaconda-Server Badge](https://anaconda.org/conda-forge/libblitz/badges/version.svg)](https://anaconda.org/conda-forge/libblitz)
+Downloads: [![Anaconda-Server Badge](https://anaconda.org/conda-forge/libblitz/badges/downloads.svg)](https://anaconda.org/conda-forge/libblitz)
+
 Installing libblitz
 ===================
 
@@ -31,7 +43,6 @@ It is possible to list all of the versions of `libblitz` available on your platf
 ```
 conda search libblitz --channel conda-forge
 ```
-
 
 
 About conda-forge
@@ -67,18 +78,6 @@ Terminology
 
 **conda-forge** - the place where the feedstock and smithy live and work to
                   produce the finished article (built conda distributions)
-
-Current build status
-====================
-
-Linux: [![Circle CI](https://circleci.com/gh/conda-forge/libblitz-feedstock.svg?style=shield)](https://circleci.com/gh/conda-forge/libblitz-feedstock)
-OSX: [![TravisCI](https://travis-ci.org/conda-forge/libblitz-feedstock.svg?branch=master)](https://travis-ci.org/conda-forge/libblitz-feedstock)
-Windows: ![](https://cdn.rawgit.com/conda-forge/conda-smithy/90845bba35bec53edac7a16638aa4d77217a3713/conda_smithy/static/disabled.svg)
-
-Current release info
-====================
-Version: [![Anaconda-Server Badge](https://anaconda.org/conda-forge/libblitz/badges/version.svg)](https://anaconda.org/conda-forge/libblitz)
-Downloads: [![Anaconda-Server Badge](https://anaconda.org/conda-forge/libblitz/badges/downloads.svg)](https://anaconda.org/conda-forge/libblitz)
 
 
 Updating libblitz-feedstock
