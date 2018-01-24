@@ -10,6 +10,6 @@ set SLN_CFG=Release
 if "%ARCH%"=="32" (set SLN_PLAT=Win32) else (set SLN_PLAT=x64)
 
 REM Build step
-msbuild "%SLN_FILE%"
-rem devenv "%SLN_FILE%" /Build "%SLN_CFG%|%SLN_PLAT%"
+rem msbuild "%SLN_FILE%"
+devenv "%SLN_FILE%" /Build "%SLN_CFG%|%SLN_PLAT%"
 if errorlevel 1 exit 1
