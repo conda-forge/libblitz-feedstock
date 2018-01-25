@@ -9,7 +9,7 @@ REM Build step
 msbuild "%SLN_FILE%" /p:Configuration=%SLN_CFG%,Platform=%ARCH%,PlatformToolset=v140
 if errorlevel 1 exit 1
 
-rem ---------------------
+rem  ---------------------
 
 rem C:\cygwin\bin\unzip Blitz-VS2005.NET.zip
 rem powershell.exe -nologo -noprofile -command "& { Add-Type -A 'System.IO.Compression.FileSystem'; [IO.Compression.ZipFile]::ExtractToDirectory('Blitz-VS2005.NET.zip', ''); }"
