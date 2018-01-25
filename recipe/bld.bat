@@ -10,5 +10,5 @@ msbuild "%SLN_FILE%" /p:Configuration=%SLN_CFG%,Platform=%SLN_PLAT%,PlatformTool
 msbuild "%SLN_FILE%" /p:Configuration=%SLN_CFG%,Platform=%SLN_PLAT%,PlatformToolset=v140,ConfigurationType=DynamicLibrary
 if errorlevel 1 exit 1
 
-move %SRC_DIR%\lib\%ARCH%\blitz.dll %LIBRARY_BIN%
-move %SRC_DIR%\lib\%ARCH%\blitz.lib %LIBRARY_LIB%
+move %SRC_DIR%\lib\%SLN_PLAT%\blitz.dll %LIBRARY_BIN%
+move %SRC_DIR%\lib\%SLN_PLAT%\blitz.lib %LIBRARY_LIB%
