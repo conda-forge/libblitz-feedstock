@@ -36,6 +36,7 @@ test:
     - test -e $PREFIX/lib/libblitz.dylib   # [osx]
     - if not exist %PREFIX%\Library\bin\blitz.dll exit 1  # [win]
     - if not exist %PREFIX%\Library\lib\blitz.lib exit 1  # [win]
+    - if not exist %PREFIX%\Library\lib\pkgconfig\blitz.pc exit 1  # [win]
 
 about:
   home: https://sourceforge.net/projects/blitz
