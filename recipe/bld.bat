@@ -21,15 +21,10 @@ mkdir %LIBRARY_INC%\blitz\meta
 mkdir %LIBRARY_INC%\blitz\ms
 
 copy %SRC_DIR%\blitz\*.h %LIBRARY_INC%\blitz\
-copy %SRC_DIR%\blitz\*.cc %LIBRARY_INC%\blitz\
 copy %SRC_DIR%\blitz\array\*.h %LIBRARY_INC%\blitz\array\
-copy %SRC_DIR%\blitz\array\*.cc %LIBRARY_INC%\blitz\array\
 copy %SRC_DIR%\blitz\gnu\*.h %LIBRARY_INC%\blitz\gnu\
-copy %SRC_DIR%\blitz\gnu\*.cc %LIBRARY_INC%\blitz\gnu\
 copy %SRC_DIR%\blitz\meta\*.h %LIBRARY_INC%\blitz\meta\
-copy %SRC_DIR%\blitz\meta\*.cc %LIBRARY_INC%\blitz\meta\
 copy %SRC_DIR%\blitz\ms\*.h %LIBRARY_INC%\blitz\ms\
-copy %SRC_DIR%\blitz\ms\*.cc %LIBRARY_INC%\blitz\ms\
 
 REM make pkg-config file
 mkdir %LIBRARY_LIB%\pkgconfig
