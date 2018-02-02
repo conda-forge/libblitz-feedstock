@@ -37,8 +37,8 @@ test:
     - if not exist %PREFIX%\Library\bin\blitz.dll exit 1  # [win]
     - if not exist %PREFIX%\Library\lib\blitz.lib exit 1  # [win]
     - if not exist %PREFIX%\Library\lib\pkgconfig\blitz.pc exit 1  # [win]
-    - if not exist %PREFIX%\Library\include\blitz\blitz.h # [win]
-    - if not exist %PREFIX%\Library\include\blitz\ms\bzconfig.h # [win]
+    - if not exist %PREFIX%\Library\include\blitz\blitz.h exit 1  # [win]
+    - if not exist %PREFIX%\Library\include\blitz\ms\bzconfig.h exit 1  # [win]
 
 about:
   home: https://sourceforge.net/projects/blitz
