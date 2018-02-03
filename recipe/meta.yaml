@@ -10,7 +10,7 @@ source:
   md5: 66268b92bda923735f2e3afc87dcb58a
 
 build:
-  number: 1
+  number: 2
   skip: true  # [win and py27]
   features:
     - vc9   # [win and py27]
