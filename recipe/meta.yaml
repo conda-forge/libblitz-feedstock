@@ -10,7 +10,7 @@ source:
   md5: 66268b92bda923735f2e3afc87dcb58a
 
 build:
-  number: 2
+  number: 3
   skip: true  # [win and py27]
   features:
     - vc9   # [win and py27]
@@ -43,6 +43,12 @@ test:
 about:
   home: https://sourceforge.net/projects/blitz
   license: LGPL 3
+  license_file: 
+    - COPYING 
+    - LICENSE 
+    - COPYING.LESSER 
+    - COPYRIGHT 
+
   summary: A C++ class library for scientific computing which provides performance on par with Fortran 77/90
 
 extra:
