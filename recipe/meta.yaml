@@ -43,6 +43,12 @@ test:
 about:
   home: https://sourceforge.net/projects/blitz
   license: LGPL 3
+  license_file: 
+    - COPYING 
+    - LICENSE 
+    - COPYING.LESSER 
+    - COPYRIGHT 
+
   summary: A C++ class library for scientific computing which provides performance on par with Fortran 77/90
 
 extra:
