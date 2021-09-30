@@ -1,16 +1,15 @@
-{% set version = "0.10" %}
+{% set version = "1.0.1" %}
 
 package:
   name: libblitz
   version: {{ version }}
 
 source:
-  fn: blitz-{{ version }}.tar.gz
-  url: http://downloads.sourceforge.net/project/blitz/blitz/Blitz%2B%2B%20{{ version }}/blitz-{{ version }}.tar.gz
-  md5: 66268b92bda923735f2e3afc87dcb58a
+  git_url: https://github.com/blitzpp/blitz.git
+  git_rev: {{ version }}
 
 build:
-  number: 2
+  number: 0
   skip: true  # [win and py27]
   features:
     - vc9   # [win and py27]
@@ -19,10 +18,15 @@ build:
 
 requirements:
   build:
-    - python  # [win]
+    - python 2
     - vc 9  # [win and py27]
     - vc 10  # [win and py34]
     - vc 14  # [win and py>=35]
+    - autoconf
+    - automake
+    - libtool
+    - {{ compiler('c') }}
+    - {{ compiler('cxx') }}
   run:
     - vc 9  # [win and py27]
     - vc 10  # [win and py34]
