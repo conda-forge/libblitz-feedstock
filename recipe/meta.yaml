@@ -10,27 +10,15 @@ source:
 
 build:
   number: 0
-  skip: true  # [win and py27]
-  features:
-    - vc9   # [win and py27]
-    - vc10  # [win and py34]
-    - vc14  # [win and py>=35]
 
 requirements:
   build:
-    - python 2
-    - vc 9  # [win and py27]
-    - vc 10  # [win and py34]
-    - vc 14  # [win and py>=35]
+    - python
     - autoconf  # [unix]
     - automake  # [unix]
     - libtool  # [unix]
     - {{ compiler('c') }}
     - {{ compiler('cxx') }}
-  run:
-    - vc 9  # [win and py27]
-    - vc 10  # [win and py34]
-    - vc 14  # [win and py>=35]
 
 test:
   commands:
