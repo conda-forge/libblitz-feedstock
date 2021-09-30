@@ -43,7 +43,7 @@ mkdir %LIBRARY_LIB%\pkgconfig
 @echo.
 @echo Name: blitz
 @echo Description: blitz Library
-@echo Version: 0.10
+@echo Version: 1.0.1
 @echo Requires: 
 @echo Libs: -L${libdir} -lblitz
 @echo Cflags: -I${includedir} -pthread
