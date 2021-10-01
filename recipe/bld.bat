@@ -12,8 +12,8 @@ if errorlevel 1 exit /b 1
 cmake --build . --config Release --target install
 if errorlevel 1 exit /b 1
 
-copy %SRC_DIR%\lib\%SLN_PLAT%\blitz.dll %LIBRARY_BIN%\
-copy %SRC_DIR%\lib\%SLN_PLAT%\blitz.lib %LIBRARY_LIB%\
+copy %SRC_DIR%\lib\Release\blitz.dll %LIBRARY_BIN%\
+copy %SRC_DIR%\lib\Release\blitz.lib %LIBRARY_LIB%\
 
 REM Copy headers
 mkdir %LIBRARY_INC%\blitz
