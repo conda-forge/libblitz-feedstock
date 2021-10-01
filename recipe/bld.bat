@@ -1,17 +1,19 @@
 cd %SRC_DIR%
-7z x Blitz-VS2010.zip -aoa
 
-set SLN_FILE=Blitz-Library.sln
-set SLN_CFG=Release
-if "%ARCH%"=="32" (set SLN_PLAT=Win32) else (set SLN_PLAT=x64)
+md build
+cd build
 
-REM Build step
-msbuild "%SLN_FILE%" /p:Configuration=%SLN_CFG%,Platform=%SLN_PLAT%,PlatformToolset=v140
-msbuild "%SLN_FILE%" /p:Configuration=%SLN_CFG%,Platform=%SLN_PLAT%,PlatformToolset=v140,ConfigurationType=DynamicLibrary
-if errorlevel 1 exit 1
+cmake .. -DCMAKE_BUILD_TYPE=Release -DPython3_EXECUTABLE="%PYTHON%" -DCMAKE_INSTALL_PREFIX="%PREFIX%" -DCMAKE_INSTALL_LIBDIR=lib -DBUILD_SHARED_LIBS=ON
+if errorlevel 1 exit /b 1
 
-copy %SRC_DIR%\lib\%SLN_PLAT%\blitz.dll %LIBRARY_BIN%\
-copy %SRC_DIR%\lib\%SLN_PLAT%\blitz.lib %LIBRARY_LIB%\
+cmake --build . --config Release
+if errorlevel 1 exit /b 1
+
+cmake --build . --config Release --target install
+if errorlevel 1 exit /b 1
+
+copy %SRC_DIR%\lib\Release\blitz.dll %LIBRARY_BIN%\
+copy %SRC_DIR%\lib\Release\blitz.lib %LIBRARY_LIB%\
 
 REM Copy headers
 mkdir %LIBRARY_INC%\blitz
@@ -44,7 +46,7 @@ mkdir %LIBRARY_LIB%\pkgconfig
 @echo Name: blitz
 @echo Description: blitz Library
 @echo Version: 0.10
-@echo Requires: 
+@echo Requires:
 @echo Libs: -L${libdir} -lblitz
 @echo Cflags: -I${includedir} -pthread
 ) > %LIBRARY_LIB%\pkgconfig\blitz.pc
