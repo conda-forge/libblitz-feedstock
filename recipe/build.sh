@@ -1,8 +1,8 @@
 #!/bin/bash
 set -ex
 
+glibtoolize || libtoolize
 aclocal
-libtoolize || glibtoolize
 autoheader
 automake --add-missing
 autoreconf
