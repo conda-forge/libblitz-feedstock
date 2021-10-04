@@ -1,14 +1,18 @@
 #!/bin/bash
 set -ex
 
+aclocal
+libtoolize || glibtoolize
+autoheader
+automake --add-missing
+autoreconf
+
 if [[ $ARCH == 64 ]];
 then
 	export ARCH_CMD="--enable-64bit"
 else
 	export ARCH_CMD="--enable-simd-width=8"
 fi
-
-autoreconf -vif
 
 ./configure \
   --prefix="${PREFIX}" \
