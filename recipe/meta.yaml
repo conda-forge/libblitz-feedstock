@@ -9,13 +9,16 @@ source:
   git_rev: {{ version }}
 
 build:
-  number: 0
+  number: 1
   skip: true  # [win]
 
 requirements:
   build:
     - python
-    - cmake
+    - autoconf
+    - automake
+    - libtool
+    - cmake  # [win]
     - {{ compiler('c') }}
     - {{ compiler('cxx') }}
 
