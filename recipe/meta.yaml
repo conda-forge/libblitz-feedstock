@@ -15,9 +15,10 @@ build:
 requirements:
   build:
     - python
-    - autoconf
-    - automake
-    - libtool
+    - autoconf  # [unix]
+    - automake  # [unix]
+    - libtool  # [unix]
+    - m4  # [unix]
     - cmake  # [win]
     - {{ compiler('c') }}
     - {{ compiler('cxx') }}
