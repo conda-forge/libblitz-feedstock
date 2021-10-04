@@ -9,19 +9,24 @@ source:
   git_rev: {{ version }}
 
 build:
-  number: 0
+  number: 1
   skip: true  # [win]
 
 requirements:
   build:
     - python
-    - cmake
+    - autoconf  # [unix]
+    - automake  # [unix]
+    - libtool  # [unix]
+    - m4  # [unix]
+    - cmake  # [win]
     - {{ compiler('c') }}
     - {{ compiler('cxx') }}
 
 test:
   commands:
     - test -d $PREFIX/include/blitz        # [unix]
+    - test -e $PREFIX/include/blitz/gnu/bzconfig.h  # [linux]
     - test -e $PREFIX/lib/libblitz.a       # [unix]
     - test -e $PREFIX/lib/libblitz.so      # [linux]
     - test -e $PREFIX/lib/libblitz.dylib   # [osx]
