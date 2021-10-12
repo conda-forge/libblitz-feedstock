@@ -1,7 +1,7 @@
 #!/bin/bash
 set -ex
 
-glibtoolize || libtoolize
+libtoolize
 aclocal
 autoheader
 automake --add-missing
