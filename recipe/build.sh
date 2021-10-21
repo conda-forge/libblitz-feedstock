@@ -1,4 +1,8 @@
 #!/bin/bash
+# Get an updated config.sub and config.guess
+rm -rf ./config
+mkdir ./config
+cp $BUILD_PREFIX/share/gnuconfig/config.* ./config
 set -ex
 
 libtoolize
