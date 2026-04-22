@@ -9,7 +9,7 @@ source:
   git_rev: {{ version }}
 
 build:
-  number: 3
+  number: 4
   skip: true  # [win]
   run_exports:
     - {{ pin_subpackage('libblitz', max_pin='x.x.x') }}
@@ -24,6 +24,7 @@ requirements:
     - cmake  # [win]
     - gnuconfig  # [unix]
     - {{ compiler('c') }}
+    - {{ stdlib("c") }}
     - {{ compiler('cxx') }}
 
 test:
